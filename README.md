@@ -113,3 +113,27 @@ Le1ZiYG5LFtv
 
 ## Issues, suggestions and feature requests
 https://github.com/bharathidas/MultiDatePicker/issues
+
+## Screenshots:
+
+![Screenshot_1](https://github.com/bharathidas/MultiDatePicker/assets/23263603/744e0e32-7e57-427f-b22b-3acd4e88583a)
+![Screenshot_2](https://github.com/bharathidas/MultiDatePicker/assets/23263603/6366fd23-2a4d-48b3-8783-cd8b8a505e44)
+![Screenshot_3](https://github.com/bharathidas/MultiDatePicker/assets/23263603/15562388-a054-4682-a3a8-c94c1d0aff83)
+![Screenshot_4](https://github.com/bharathidas/MultiDatePicker/assets/23263603/f1f82a67-c6b2-431d-8442-bf6f36b00e30)
+![Screenshot_5](https://github.com/bharathidas/MultiDatePicker/assets/23263603/f1b6f310-dd35-4dca-ace4-2877fc6d1a23)
+![Screenshot_6](https://github.com/bharathidas/MultiDatePicker/assets/23263603/a9411995-1fa2-4b1c-a3b4-ffbef05bcd61)
+![Screenshot_7](https://github.com/bharathidas/MultiDatePicker/assets/23263603/8065c5ca-27ed-4efc-9f93-385a326169d1)
+![Screenshot_8](https://github.com/bharathidas/MultiDatePicker/assets/23263603/708bf170-af91-492d-896e-9fdc7fe66283)
+![Screenshot_9](https://github.com/bharathidas/MultiDatePicker/assets/23263603/99119704-7242-4cf5-b8c3-1c583e8a614f)
+![Screenshot_10](https://github.com/bharathidas/MultiDatePicker/assets/23263603/45d56796-7340-47c6-8462-90b93ee738ed)
+
+
+
+
+
+
+
+
+
+
+
