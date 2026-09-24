@@ -1,0 +1,9 @@
+.multidate-picker {
+    display: inline-block;
+    width: 100%;
+}
+
+.multidate-picker .rmdp-input {
+    width: 100%;
+    box-sizing: border-box;
+}

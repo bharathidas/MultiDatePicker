@@ -109,7 +109,7 @@ demo_administrator
 Le1ZiYG5LFtv
 
 ## Dependencies:
-•	Mendix modeler 9.12.4.
+•	Mendix Studio Pro 10.24.17 (widget 1.2.0). For Mendix 9.12.4 and later 9.x versions, use widget 1.1.0.
 
 ## Issues, suggestions and feature requests
 https://github.com/bharathidas/MultiDatePicker/issues

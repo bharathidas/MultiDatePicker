@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.multidatepicker.MultidatePicker" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Multidate Picker</name>
+    <description>Multi Date Picker</description>
+    <icon>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABp1BMVEUAAABV//9mzP9LtP9Ms/9Jtv9NsvdJsfpLtPpJsfdJsfhJsvhJsvdKsvdJsPhKsPhJsfdJsPhJsfdIsfhJsfdIsPdJsfhJsfhJsPhJsPhIsfhIsPdJsPdKsPdKsfdNsvdOsvdPs/dQs/dRtPdStPdTtPdUtfdWtvdXtvdauPdcuPdeufdeufhguvhiu/hju/hkvPhmvfhnvfhpvvhrv/huwPhvwfhxwfhywvhzwvh4xfl5xfl6xfl8xvl9xvl9x/mByPmCyfmFyvmGyvmJzPmKzPmLzfmNzvqPzvqQz/qT0PqU0PqU0fqX0vqY0vqa0/qe1fqg1vqj1/uk1/un2fup2vut2/uv3Puw3Puw3fuz3vu13/u23/u34Pu44Pu64fu64fy84vy94vy+4/y/4/zD5fzE5fzG5vzH5vzI5/zK6PzL6PzR6/zT7P3U7P3V7f3W7f3Y7v3Z7v3c8P3e8f3f8f3g8f3i8v3l8/3l9P3n9P3r9v7t9/7u9/7v+P7w+P7x+f7y+f70+v71+v74/P75/P76/f77/f78/f78/v79/v7+/v7////6dMsRAAAAG3RSTlMAAwURGxwhMTNic3SEh4iVp7XBzejt7vH5/f6PsMNWAAABsklEQVR4AWIYfGAUjIJRMAqYuYREJKWJAqLCPGwY+jnFpEkBEryMqPr5pEkFgkwo9kuTDviR/S9GhgFSHAgDuKXJAQIIA4TIMkAcEY4i0mQBVrgBkuQZwA43QJo8wIFhQEhEOIBQOutHJozDOP5Crp4e1RhkJ0tKGJFd6oNEdtmJyEIzpaZl5nrRZgaHM/2Pf5/vwXXfyagXgG93bwSAlEolowLMm9w83gibhXH2gKKVdD67gTnWjwCk+VVjMQS4suSnnjMLRVFc9sAHvAX2A9fySaXNBMbEZVUWscaHIMRuqwBgD8hDEbnsRmfjUKJkAQZGCTlO/xWBwIADQLIZBlY441MvfoF1xlFS/4fy+bzXKh4dgNJE7L3eh3tmtuWa+AMcMIY3dgUvZQpGEYmMw2kD7HC+R29UqyoXLaBd0QZxzgXgikLLDSqJTKU5HOcS0MsbA9jPqtwCRvXm2eorBbNIJBw3KJ9O4Yl+AAXdnyaLt7PWN3jRWLvzmAVp94zO5+n41/onfo/UpExxZqI0O7NQr0DhIq9Io7hQpbRYp7hiobRqo6ByFcNWuY6CUTAKRgEAo8X0lBD3V30AAAAASUVORK5CYII=
+    </icon>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="valueKey" type="attribute" required="true">
+                <caption>Value</caption>
+                <description>The value of the date passed into the component</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+             <property key="placeholderKey" type="attribute" required="false">
+                <caption>Placeholder</caption>
+                <description>Placeholder</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="disabledKey" type="attribute" required="false">
+                <caption>Disabled</caption>
+                <description>Disabled</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="readOnlyKey" type="attribute" required="false">
+                <caption>Read Only</caption>
+                <description>Read Only</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="inputClassKey" type="attribute" required="false">
+                <caption>Input Class</caption>
+                <description>Input Class for styling</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="editableKey" type="attribute" required="false">
+                <caption>Editable</caption>
+                <description>Input of manual date</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+
+        </propertyGroup>
+        <propertyGroup caption="Display and Format">
+        <property key="formatKey" type="attribute" required="false">
+                <caption>Format</caption>
+                <description>Format of the date</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="dateSeparatorKey" type="attribute" required="false">
+                <caption>Date Separator</caption>
+                <description>default is ','</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="fullYearKey" type="attribute" required="false">
+                <caption>Display Full Year</caption>
+                <description>Display Full Year</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="highlightTodayKey" type="attribute" required="false">
+                <caption>Highlight Today</caption>
+                <description>Highlight Today</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            </propertyGroup>
+            <propertyGroup caption="Date Selection">
+
+             <property key="minDateKey" type="attribute" required="false">
+                <caption>Min Date</caption>
+                <description>Min date for selection</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="maxDateKey" type="attribute" required="false">
+                <caption>Max Date</caption>
+                <description>Max date for selection</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="onOpenPickNewDateKey" type="attribute" required="false">
+                <caption>on Open Pick New Date</caption>
+                <description>on Open Pick New Date</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+
+            </propertyGroup>
+            <propertyGroup caption="Multiple Dates and Range Selection">
+            <property key="multipleKey" type="attribute" required="false">
+                <caption>Multiple</caption>
+                <description>Set to true when range is true</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="rangeKey" type="attribute" required="false">
+                <caption>Range</caption>
+                <description>Range Selection</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="rangeHoverKey" type="attribute" required="false">
+                <caption>Range Hover</caption>
+                <description>Highlight the range when hovering the dates</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+             <property key="multipleRangeSeparatorKey" type="attribute" required="false">
+                <caption>Multiple Range Separator</caption>
+                <description>Multiple Range Separator</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+
+        </propertyGroup>
+        <propertyGroup caption="Month and Year Picker">
+        <property key="onlyMonthPickerKey" type="attribute" required="false">
+                <caption>Only Month Picker</caption>
+                <description>Enable only month picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="onlyYearPickerKey" type="attribute" required="false">
+                <caption>Only Year Picker</caption>
+                <description>Enable only year picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            
+            <property key="noofMonthsKey" type="attribute" required="false">
+                <caption>No. of Months</caption>
+                <description>No. of Months</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>                    
+                </attributeTypes>
+            </property>
+            <property key="disableYearPickerKey" type="attribute" required="false">
+                <caption>Disable Year Picker</caption>
+                <description>Disable Year Picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+             <property key="disableMonthPickerKey" type="attribute" required="false">
+                <caption>Disable Month Picker</caption>
+                <description>Disable Month Picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+             
+            <property key="monthsKey" type="attribute" required="false">
+                <caption>Months</caption>
+                <description>Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            
+        </propertyGroup>
+        <propertyGroup caption="Week and Day Picker">
+        <property key="weekPickerKey" type="attribute" required="false">
+                <caption>Week Picker</caption>
+                <description>Week Picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            
+           
+            <property key="disableDayPickerKey" type="attribute" required="false">
+                <caption>Disable Day Picker</caption>
+                <description>Disable Day Picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="weekDaysKey" type="attribute" required="false">
+                <caption>Week days</caption>
+                <description>sun,mon,tue,wed,thur,fri,sat</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="weekStartDayIndexKey" type="attribute" required="false">
+                <caption>Week Start Day Index</caption>
+                <description>change the start day of the week.For example, if you want the start day of the week to be Monday, you should set the weekStartDayIndex value to 1.The value of weekStartDayIndex must be a number between 0 and 6.</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>                    
+                </attributeTypes>
+            </property>
+            <property key="showOtherDaysKey" type="attribute" required="false">
+                <caption>Show Other Days</caption>
+                <description>Show Other Days</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="displayWeekNumbersKey" type="attribute" required="false">
+                <caption>Display Week Numbers</caption>
+                <description>Display Week Numbers</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="weekNumberNameKey" type="attribute" required="false">
+                <caption>week Number</caption>
+                <description>week Number Header Name</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="sortKey" type="attribute" required="false">
+                <caption>Sort</caption>
+                <description>sort the selected date</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+        
+        </propertyGroup>
+
+        <propertyGroup caption="Current Date">
+        <property key="currentDateYearKey" type="attribute" required="false">
+                <caption>Year</caption>
+                <description>on opening muti date picker which Year needs to be displayed</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>                    
+                </attributeTypes>
+            </property>
+            <property key="currentDateMonthKey" type="attribute" required="false">
+                <caption>Month</caption>
+                <description>on opening muti date picker which Month needs to be displayed</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>                    
+                </attributeTypes>
+            </property>
+            <property key="currentDateDayKey" type="attribute" required="false">
+                <caption>Day</caption>
+                <description>on opening muti date picker which Day needs to be displayed</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>                    
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Header">
+            <property key="headerMonthYearSeparatorKey" type="attribute" required="false">
+                <caption>Header Month Year Separator</caption>
+                <description>Header Month Year Separator</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="hideYearFromHeaderKey" type="attribute" required="false">
+                <caption>Hide Year From Header</caption>
+                <description>Hide Year From Header</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property> 
+            <property key="hideMonthFromHeaderKey" type="attribute" required="false">
+                <caption>Hide Month From Header</caption>
+                <description>Hide Month From Header</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property> 
+            <property key="hideWeekDaysFromHeaderKey" type="attribute" required="false">
+                <caption>Hide Week Days From Header</caption>
+                <description>Hide Week Days From Header</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+
+        </propertyGroup>
+        <propertyGroup caption="Plugin">
+        <property key="DatePanelKey" type="attribute" required="false">
+                <caption>Date Panel</caption>
+                <description>display date panel</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+             <property key="TimePickerKey" type="attribute" required="false">
+                <caption>Time Picker</caption>
+                <description>display Time Picker</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="DatePickerHeaderKey" type="attribute" required="false">
+                <caption>Date Picker Header</caption>
+                <description>display Date Picker Header</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="highlightWeekEndKey" type="attribute" required="false">
+                <caption>highlight Week End</caption>
+                <description>highlight Week End</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+            <property key="highlightWeekEndArrayKey" type="attribute" required="false">
+                <caption>highlight Week End Array</caption>
+                <description>Which week (Array) needs to be highlighted</description>
+                <attributeTypes>
+                    <attributeType name="String"/>                    
+                </attributeTypes>
+            </property>
+            <property key="ToolbarKey" type="attribute" required="false">
+                <caption>Tool bar</caption>
+                <description>display tool bar</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>                    
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
