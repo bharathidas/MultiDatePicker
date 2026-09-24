@@ -13,6 +13,8 @@ Download `mendix.MultidatePicker.mpk` from the [V1.2.0 release](https://github.c
 
 **Upgrading:** replace the `.mpk` in your app's `widgets` folder, press **F4** in Studio Pro, and choose **Update all widgets** if Studio Pro reports that the widget definition has changed.
 
+**Sample module:** [`MultiDatePicker.mpk`](https://github.com/bharathidas/MultiDatePicker/raw/main/MultiDatePicker.mpk) (Studio Pro 10.24.17) contains a playground page, `MultiDatePicker.Home_Web`, where every setting can be changed while you use the picker. It includes the 1.2.0 widget. Import it with **App > Import module package** and add the page to your navigation. It uses the `Atlas_Default` layout from Atlas_Core.
+
 ### Source code
 
 The widget source is in [`multidatePicker/`](multidatePicker). To build it:
