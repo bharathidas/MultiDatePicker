@@ -3,6 +3,28 @@ Multi Date Picker is a flexible and highly customizable date picker component. I
 
 https://www.npmjs.com/package/react-multi-date-picker
 
+## Version 1.2.0 for Mendix Studio Pro 10.24.17
+
+Download `mendix.MultidatePicker.mpk` from the [V1.2.0 release](https://github.com/bharathidas/MultiDatePicker/releases/tag/V1.2.0). The `mendix.MultidatePicker.mpk` on `main` is always the latest version (**1.2.0**). For Mendix 9, use the [V1.1.0 release](https://github.com/bharathidas/MultiDatePicker/releases/tag/V1.1.0).
+
+- Rebuilt with `@mendix/pluggable-widgets-tools` 10.16.0 for Studio Pro 10.24.17.
+- Works in the Mendix 10 React client. Earlier versions failed there with "require is not defined" or "t.forwardRef is not a function", because react-multi-date-picker is CommonJS only; `multidatePicker/rollup.config.js` rewrites those references at build time.
+- Current Date: empty Year, Month or Day attributes (which Mendix reads as 0) are ignored and today's value is used. Before, the calendar opened on an invalid date such as "November, -1".
+
+**Upgrading:** replace the `.mpk` in your app's `widgets` folder, press **F4** in Studio Pro, and choose **Update all widgets** if Studio Pro reports that the widget definition has changed.
+
+### Source code
+
+The widget source is in [`multidatePicker/`](multidatePicker). To build it:
+
+```
+cd multidatePicker
+npm install
+npm run release
+```
+
+The package is written to `dist/<version>/mendix.MultidatePicker.mpk`.
+
 ## Features
 #### •	Value: 
 The value of the date passed into the component.
